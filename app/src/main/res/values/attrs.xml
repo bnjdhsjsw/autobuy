@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- SlidingMenu -->
+    <declare-styleable name="SlidingMenu">
+        <attr name="s_mode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+    <!-- 物流 -->
+    <!-- Style of the tab indicator's tabs. -->
+    <attr name="vpiTabPageIndicatorStyle" format="reference" />
+
+    <!-- LockPatternView class attributes -->
+    <declare-styleable name="LockPatternView">
+
+        <!--
+             Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height"
+        -->
+        <attr name="aspect">
+            <enum name="square" value="0" />
+            <enum name="lockWidth" value="1" />
+            <enum name="lockHeight" value="2" />
+        </attr>
+        <attr name="line" format="color" />
+        <attr name="btnNormal" format="reference" />
+        <attr name="btnTouched" format="reference" />
+        <attr name="circleNormal" format="reference" />
+        <attr name="circleGreen" format="reference" />
+        <attr name="circleRed" format="reference" />
+        <attr name="arrowGreenUp" format="reference" />
+        <attr name="arrowRedUp" format="reference" />
+    </declare-styleable>
+
+    <!-- style for SwitchButton -->
+    <declare-styleable name="SwitchButton">
+        <attr name="onDrawable" format="reference" />
+        <attr name="offDrawable" format="reference" />
+        <attr name="thumbDrawable" format="reference" />
+        <attr name="thumb_margin" format="dimension|reference" />
+        <attr name="thumb_marginTop" format="dimension|reference" />
+        <attr name="thumb_marginBottom" format="dimension|reference" />
+        <attr name="thumb_marginLeft" format="dimension|reference" />
+        <attr name="thumb_marginRight" format="dimension|reference" />
+        <attr name="thumb_width" format="dimension|reference" />
+        <attr name="thumb_height" format="dimension|reference" />
+        <attr name="onColor" format="color|reference" />
+        <attr name="offColor" format="color|reference" />
+        <attr name="thumbColor" format="color|reference" />
+        <attr name="thumbPressedColor" format="color|reference" />
+        <attr name="animationVelocity" format="integer" />
+        <attr name="myradius" format="integer" />
+        <attr name="measureFactor" format="float" />
+        <attr name="insetLeft" format="dimension|reference" />
+        <attr name="insetRight" format="dimension|reference" />
+        <attr name="insetTop" format="dimension|reference" />
+        <attr name="insetBottom" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Pullable">
+        <attr name="PullMode">
+            <flag name="pullFromStart" value="1" />
+            <flag name="pullFromEnd" value="-1" />
+            <flag name="both" value="0" />
+        </attr>
+    </declare-styleable>
+
+    <attr name="titleTextSize" format="dimension" />
+
+    <declare-styleable name="marquee">
+        <!--跑马类型-->
+        <attr name="marqueeType" format="reference|integer" />
+        <attr name="marqueeDelay" format="reference|integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomIntEditView">
+        <attr name="maxValues" format="integer" />
+        <attr name="minValues" format="integer" />
+        <attr name="addOrMinusValues" format="integer" />
+        <attr name="default_values" format="integer" />
+        <attr name="ceilingValue_int" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="View">
+        <attr name="text" format="string|reference" />
+        <attr name="imageSrc" format="reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="coungBackground" format="reference" />
+        <attr name="pointColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PickerView">
+
+        <attr name="isLoop" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="circle_progress_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedCornerLayout">
+        <attr name="border_couner" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleView">
+        <attr name="backSrc" format="reference" />
+        <attr name="titleText" format="string|reference" />
+        <attr name="titleTextColor" format="color|reference" />
+        <attr name="rightText" format="string|reference" />
+        <attr name="rightTextColor" format="color|reference" />
+        <attr name="rightSrc" format="reference" />
+        <attr name="topPaddingStatusBar" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="closeSuffixStr" format="string|reference" />
+        <attr name="openSuffixStr" format="string|reference" />
+        <attr name="closeSuffixStrColor" format="color|reference" />
+        <attr name="openSuffixStrColor" format="color|reference" />
+        <attr name="collapseMaxLines" format="integer" />
+    </declare-styleable>
+
+    <attr name="autoScaleTextViewStyle" />
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

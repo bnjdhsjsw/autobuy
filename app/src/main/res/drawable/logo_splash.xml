@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"> <!-- 底层白色 -->
+
+    <item>
+        <color android:color="@android:color/transparent" />
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/loading_new" />
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/logo_start" />
+    </item>
+
+</layer-list>
