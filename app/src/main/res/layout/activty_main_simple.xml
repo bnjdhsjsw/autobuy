@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="单尺码秒杀模式"
+                    android:textSize="@dimen/ysf_text_size_18"
+                    android:textStyle="bold"
+                    android:textColor="@color/e333333"
+                    android:padding="@dimen/dp_3"
+                    android:onClick="@{Listener}"
+                    android:background="@color/f5f5f5"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.istone.testbuy.view.CleanEditText
+                    android:id="@+id/etSkid"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:hint="请输入秒杀编号"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/e333333"
+                    app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+                <EditText
+                    android:id="@+id/etCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:hint="请输入秒杀数量，默认1"
+                    app:layout_constraintTop_toBottomOf="@+id/etSkid"
+                    android:layout_marginTop="@dimen/ysf_text_size_10"
+                    android:gravity="center"
+                    android:textSize="@dimen/ysf_text_size_15"
+                    android:textColor="@color/ysf_red_e64340"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:id="@+id/getGoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="获取商品信息"
+                    android:textColor="@color/e333333"
+                    android:padding="@dimen/dp_3"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCount"
+                    android:background="@color/f5f5f5"/>
+
+                <TextView
+                    android:id="@+id/startBuy"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="开始秒杀"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintEnd_toStartOf="@+id/stopBuy"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/getGoods"
+                    android:textColor="@color/ff4c1a"
+                    android:background="@color/f5f5f5"/>
+
+                <TextView
+                    android:id="@+id/stopBuy"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="停止秒杀"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/startBuy"
+                    app:layout_constraintTop_toBottomOf="@+id/getGoods"
+                    android:textColor="@color/ff4c1a"
+                    android:background="@color/f5f5f5"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listGoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/startBuy"
+                    app:spanCount="4" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:background="@color/f5f5f5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listGoods"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

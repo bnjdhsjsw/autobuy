@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/f5f5f5"
+            android:gravity="center"
+            android:onClick="@{Listener}"
+            android:padding="@dimen/dp_3"
+            android:text="请选择模式"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ysf_text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/count0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_100"
+            android:background="@color/f5f5f5"
+            android:gravity="center"
+            android:onClick="@{Listener}"
+            android:padding="@dimen/dp_3"
+            android:text="自动秒杀模式（只为成功率）"
+            android:textColor="@color/e010101"
+            android:textSize="@dimen/ysf_text_size_18"
+            app:layout_constraintBottom_toTopOf="@+id/count10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/count10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@color/f5f5f5"
+            android:gravity="center"
+            android:onClick="@{Listener}"
+            android:padding="@dimen/dp_3"
+            android:text="单尺码秒杀模式(只买选择的尺码)"
+            android:textColor="@color/e010101"
+            android:textSize="@dimen/ysf_text_size_18"
+            app:layout_constraintTop_toBottomOf="@+id/count0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

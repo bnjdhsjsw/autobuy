@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ysf_text_size_18"
+                    android:text="请输入必填参数"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+
+                <com.istone.testbuy.view.CleanEditText
+                    android:id="@+id/siteId"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:hint="请输入SiteId(必填)"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/e333333"
+                    app:layout_constraintBottom_toTopOf="@+id/Authorization"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <com.istone.testbuy.view.CleanEditText
+                    android:id="@+id/Authorization"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:hint="请输入Authorization(必填)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/e333333"
+                    app:layout_constraintBottom_toTopOf="@+id/Referer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/siteId" />
+
+                <com.istone.testbuy.view.CleanEditText
+                    android:id="@+id/Referer"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_45"
+                    android:singleLine="false"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:gravity="center"
+                    android:hint="请输入Referer(必填)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/e333333"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Authorization" />
+
+                <com.istone.testbuy.view.CleanEditText
+                    android:id="@+id/adressId"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:hint="请输入addressId(必填)"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/e333333"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Referer" />
+
+                <TextView
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ysf_text_size_18"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="进入下一步"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/adressId"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dp_50"
+                    android:gravity="center" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

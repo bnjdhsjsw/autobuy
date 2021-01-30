@@ -1,0 +1,184 @@
+apply plugin: 'com.android.application'
+apply plugin: "com.blankj.bus"
+apply plugin: 'com.mob.sdk'
+
+static String getYear() {
+    return "\"" + new Date().format("yyyy", TimeZone.getDefault()) + "\""
+}
+
+static String releaseTime() {
+    return "\"" + new Date().format("yyyy-MM-dd HH:mm:ss", TimeZone.getDefault()) + "\""
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '29.0.3'
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.istone.testbuy"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 90
+        versionName '7.0.0'
+        multiDexEnabled true
+        resConfigs "zh"
+        flavorDimensions "versionCode"
+        ndk { abiFilters "x86", "armeabi", "armeabi-v7a" }
+        packagingOptions {
+            exclude 'resources.arsc'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/DEPENDENCIES'
+
+            doNotStrip "*/arm64-v8a/*.so"
+            doNotStrip "*/armeabi-v7a/*.so"
+        }
+        buildConfigField "String", "BUILD_TIME", releaseTime()//BuildConfig默认生成打包时间
+        resValue "string", "versionName", "版本号：$versionName"//strings.xml默认生成版本号字符串
+        resValue "string", "copyRight", "CopyRight © 2000-${getYear()}"//strings.xml默认生成版权字符串
+        resValue "string", "copyRightWelcome", "CopyRight © 2000-${getYear()} m.banggo.com"
+    }
+    signingConfigs {
+        develop {
+            storeFile file("mbstore.keystore")
+            storePassword "mbstore"
+            keyAlias "mbstorekey"
+            keyPassword "mbstore"
+        }
+        release {
+            storeFile file("mbstore.keystore")
+            storePassword "mbstore"
+            keyAlias "mbstorekey"
+            keyPassword "mbstore"
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.develop
+        }
+        release {
+            minifyEnabled false// 是否进行混淆
+            zipAlignEnabled false//Zipalign优化
+            shrinkResources false// 移除无用的resource文件
+            signingConfig signingConfigs.release
+            // 混淆文件的位置 加载默认混淆配置文件 progudard-android.txt在sdk目录里面，不用管，proguard.cfg是我们自己配<span></span>的混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+//                    variant.getPackageApplication().outputDirectory =
+//                            new File(project.rootDir.absolutePath + File.separator + "packages")
+                    if (outputFileName != null && outputFileName.endsWith('.apk')) {
+                        outputFileName = "fan-${variant.versionName}-${variant.flavorName}.apk"
+                    }
+                }
+            }
+        }
+    }
+    productFlavors {
+        vivo {}
+        oppo {}
+        baidu {}
+        banggo {}
+        lenovo {}
+        huawei {}
+        xiaomi {}
+        tencent {}
+        qihu360 {}
+        wandoujia {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [RELEASE_CHANNELL_VALUE: name]
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    dataBinding { enabled = true }
+    buildFeatures { dataBinding = true }
+    sourceSets { main { jniLibs.srcDirs = ['libs'] } }
+}
+
+MobSDK {
+    appKey "m3114e299fe51c"
+    appSecret "9218db377d5a22f4d1b13940f2f3245e"
+    ShareSDK {
+        gui false
+        devInfo {
+            Wechat {
+                appId "wx539d537f6d9ae425"
+                appSecret "652bf1aaa39004534d79580117e1ff80"
+                miniprogramType 0 //0-正式，1-开发，2-体验
+                bypassApproval false
+            }
+            WechatMoments {
+                appId "wx539d537f6d9ae425"
+                appSecret "652bf1aaa39004534d79580117e1ff80"
+            }
+            QQ {
+                appId "1101061470"
+            }
+        }
+    }
+}
+
+dependencies {
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs\\jackson-all-1.9.11.jar')
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.drawerlayout:drawerlayout:1.1.1"//侧滑
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'//图片加载
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'//glide图片处理工具
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'com.blankj:utilcodex:1.30.5'//工具类
+    implementation 'com.hyman:flowlayout-lib:1.1.2'//标签布局
+    implementation 'com.zxy.android:recovery:1.0.0'//App异常恢复框架
+    implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'//视频播放
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'//网络请求
+    implementation 'com.bigkoo:convenientbanner:2.1.5'//轮播图库
+    implementation 'com.qiyukf.unicorn:unicorn:5.13.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'//RxJava
+    implementation 'com.github.zrunker:ZViewPager:v1.0.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'me.codeboy.android:align-text-view:2.3.2'//文字对齐
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'//ConverterFactory的Gson依赖包
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.3'//上拉加载下拉刷新
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3@aar'//圆形头像
+
+}
+
+task clean1(type: Exec) {
+    ext.lockhunter = '\"C:\\ProgramFiles\\LockHunter\\LockHunter.exe\"'
+    def buildDir = file(new File("build"))
+    commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
+}

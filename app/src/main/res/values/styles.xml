@@ -1,0 +1,195 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="WelcomeTheme" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@drawable/ic_launcher_background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="divide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/eeeeee</item>
+    </style>
+
+    <style name="myDialog" parent="Theme_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="other_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- dialog无标题栏 -->
+    <style name="Theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 灰色字体的文本 -->
+
+    <!-- 灰色背景的白色文字的按钮 -->
+
+    <!-- 白色背景，灰色边框，黑色字体 -->
+
+    <!-- 黑色背景的白色文字的按钮 -->
+
+    <!-- 红色背景的白色文字的按钮 --><![CDATA[
+
+
+    !-- 红色背景的白色文字的按钮新样式 -->
+
+    ]]><!-- 黑色背景的白色文字的按钮 -->
+
+    <!-- 白框按钮  by cloudy -->
+
+    <!-- 外部布局样式 -->
+    <!-- 帮组 -->
+
+    <!-- 将activity设置为dialog -->
+
+    <!-- 应用主题 -->
+
+    <style name="Customdialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- <item name="android:windowIsTranslucent">true</item -->
+    </style>
+
+    <!-- <style name="ball_red_style"> -->
+    <!-- <item name="android:layout_width">120dp</item> -->
+    <!-- <item name="android:layout_height">120dp</item> -->
+    <!-- <item name="android:layout_marginTop">20dp</item> -->
+    <!-- <item name="android:background">@drawable/ball_red</item> -->
+    <!-- <item name="android:gravity">center</item> -->
+    <!-- <item name="android:orientation">vertical</item> -->
+    <!-- </style> -->
+
+
+    <!-- <style name="ball_yellow_style"> -->
+    <!-- <item name="android:layout_width">180dp</item> -->
+    <!-- <item name="android:layout_height">180dp</item> -->
+    <!-- <item name="android:background">@drawable/ball_yellow</item> -->
+    <!-- <item name="android:gravity">center</item> -->
+    <!-- <item name="android:orientation">vertical</item> -->
+    <!-- </style> -->
+
+
+    <!-- <style name="ball_blue_style"> -->
+    <!-- <item name="android:layout_width">160dp</item> -->
+    <!-- <item name="android:layout_height">160dp</item> -->
+    <!-- <item name="android:background">@drawable/ball_blue</item> -->
+    <!-- <item name="android:gravity">center</item> -->
+    <!-- <item name="android:orientation">vertical</item> -->
+    <!-- </style> -->
+
+
+    <!-- <style name="ball_green_style"> -->
+    <!-- <item name="android:layout_width">120dp</item> -->
+    <!-- <item name="android:layout_height">120dp</item> -->
+    <!-- <item name="android:background">@drawable/ball_green</item> -->
+    <!-- <item name="android:gravity">center</item> -->
+    <!-- <item name="android:orientation">vertical</item> -->
+    <!-- </style> -->
+
+
+    <!-- <style name="ball_purple_style"> -->
+    <!-- <item name="android:layout_width">100dp</item> -->
+    <!-- <item name="android:layout_height">100dp</item> -->
+    <!-- <item name="android:background">@drawable/ball_purple</item> -->
+    <!-- <item name="android:gravity">center</item> -->
+    <!-- <item name="android:orientation">vertical</item> -->
+    <!-- </style> -->
+
+
+    <style name="DialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="anim_push_bottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in_wheelview</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out_wheelview</item>
+    </style>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:padding">@dimen/dp_6</item>
+        <item name="android:minWidth">@dimen/dp_0</item>
+        <item name="android:minHeight">@dimen/dp_0</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="base_anim">
+        <item name="android:windowEnterAnimation">@anim/base_in_animation</item>
+        <item name="android:windowExitAnimation">@anim/base_out_animation</item>
+    </style>
+
+    <style name="base_visible_anim">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+
+    <style name="dialog_share" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+    </style>
+
+    <style name="slide_anim">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="drop_anim">
+        <item name="android:windowEnterAnimation">@anim/drop_in_animation</item>
+        <item name="android:windowExitAnimation">@anim/drop_out_animation</item>
+    </style>
+
+    <style name="share_tab_appearance">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+
+</resources>

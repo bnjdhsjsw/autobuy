@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.istone.testbuy.view.CleanEditText
+                    android:id="@+id/etSkid"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:hint="可以输入店铺id，默认821"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/e333333"/>
+
+                <TextView
+                    android:id="@+id/count0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="亲，请选择账号"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/dp_3"
+                    android:textSize="@dimen/ysf_text_size_18"
+                    android:textStyle="bold"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/etSkid"
+                    android:background="@color/f5f5f5"/>
+
+                <TextView
+                    android:id="@+id/count10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="飘落的枫叶"
+                    android:padding="@dimen/dp_3"
+                    android:textColor="@color/e333333"
+                    android:textSize="@dimen/ysf_text_size_15"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/count0"
+                    android:background="@color/f5f5f5"/>
+
+                <TextView
+                    android:id="@+id/count20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="峰峰"
+                    android:textSize="@dimen/ysf_text_size_15"
+                    android:textColor="@color/e333333"
+                    android:padding="@dimen/dp_3"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/count10"
+                    android:background="@color/f5f5f5"/>
+
+                <TextView
+                    android:id="@+id/count30"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="小米"
+                    android:textSize="@dimen/ysf_text_size_15"
+                    android:textColor="@color/e333333"
+                    android:padding="@dimen/dp_3"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/count20"
+                    android:background="@color/f5f5f5"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/count40"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="敏ing"
+                    android:textSize="@dimen/ysf_text_size_15"
+                    android:textColor="@color/e333333"
+                    android:padding="@dimen/dp_3"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/count30"
+                    android:background="@color/f5f5f5"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/count50"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="哎呦喂"
+                    android:textSize="@dimen/ysf_text_size_15"
+                    android:textColor="@color/e333333"
+                    android:padding="@dimen/dp_3"
+                    android:onClick="@{Listener}"
+                    app:layout_constraintTop_toBottomOf="@+id/count40"
+                    android:background="@color/f5f5f5"
+                    android:visibility="gone"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
