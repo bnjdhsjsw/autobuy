@@ -1,0 +1,23 @@
+商品详情返回对比结果
+
+下单参数 shoppingcartId 要从购物车获取
+下单返回结果 shoppingcartId 要从购物车获取
+购物车的参数commodityId 就是下单的 shopCommodityId
+
+下单返回修改参数有  
+
+zoneQsLevel 从详情获取
+skuId 从商品详情对应尺码的id  或者添加购物车的参数productSkuId
+
+salePriceAmount totalAmount salePrice tagPrice从购物车获取统一价格 购物车获取
+shoppingcartId 从购物车获取 每次添加都要修改
+productCode 购物车获取
+productNo 购物车获取
+sizeNo  购物车获取
+sizeCode  购物车获取
+sizeEur  购物车获取
+productName 购物车获取   
+picPath  购物车获取   
+brandDetailNo 购物车获取   
+skuNo 购物车的productSkuNo参数获取 
+shopCommodityId 购物车的commodityId参数获取 

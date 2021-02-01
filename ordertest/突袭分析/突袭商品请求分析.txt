@@ -1,0 +1,242 @@
+商品详情
+
+{
+  "code": 1,
+  "bizCode": 20000,
+  "bizMsg": "成功",
+  "data": {
+    "zoneQsLevel": "H",
+    "id": "c33d46bd98c049f0a95398655681c264",
+    "productCode": "CT0979-602",
+    "brandNo": "NK",
+    "brandDetailNo": "NK01",
+    "productNo": "20200927001035",
+    "productName": "AIR JORDAN 1 MID CMFT\n部分鞋盒存在瑕疵褶皱，拍下即默认接受瑕疵。",
+    "subTitle": "",
+    "tagPrice": 1199.00,
+    "salePrice": 1199.00,
+    "thumbnailPath": "https://i1.ygimg.cn/pics/nike/2021/101434681/101434681_01_m.jpg?10",
+    "shopNo": "NKCQ08",
+    "shopName": "滔搏重庆环球Jordan",
+    "color": "默认",
+    "description": "<p>️此款将于72小时发货</p ><p>️不接受下单秒退 错拍 不喜欢 拍错码 拍错款（如出现即买即退，恶意退款者将会拉黑处理）</p ><p>️鞋盒褶皱、压痕、破裂不属于质量问题，完美主义者勿拍</p ><p>️若快递地址为其他平台APP地址（得物、NICE、有货等）一律拉黑处理、永久不得购买限量产品</p ><p>若因系统造成超卖现象 店铺有权取消订单</p ><p>不支持下单改地址</p ><p>️部分地区由于物流原因无法包邮（新疆，西藏等地）</p ><p>️：下单即表示默认以上规则</p >",
+    "status": 3,
+    "merchantNo": "TS",
+    "singleSkuLimit": 20,
+    "stock": 1,
+    "group": [{
+      "id": "c33d46bd98c049f0a95398655681c264",
+      "color": "默认"
+    }],
+    "picList": ["https://i1.ygimg.cn/pics/nike/2021/101434681/101434681_01_m.jpg?10", "https://i1.ygimg.cn/pics/nike/2021/101434681/101434681_02_m.jpg?10", "https://i1.ygimg.cn/pics/nike/2021/101434681/101434681_03_m.jpg?10", "https://i1.ygimg.cn/pics/nike/2021/101434681/101434681_04_m.jpg?10"],
+    "skuList": [{
+      "id": "f3796570648347a4b47067bc759fb3a1",
+      "skuNo": "20201130006753",
+      "stock": 1,
+      "sizeNo": "20160426000038",
+      "sizeCode": "5",
+      "sizeEur": "35.5"
+    }, {
+      "id": "e24fe332148c4e2dade3afb76161032c",
+      "skuNo": "20201130006754",
+      "stock": 1,
+      "sizeNo": "20160426000039",
+      "sizeCode": "5.5",
+      "sizeEur": "36"
+    }, {
+      "id": "ed52386b960240ca8223aaa75562d0c5",
+      "skuNo": "20201130006755",
+      "stock": 1,
+      "sizeNo": "20160426000040",
+      "sizeCode": "6",
+      "sizeEur": "36.5"
+    }, {
+      "id": "b6506ab861834f9f86800cd90f7909f6",
+      "skuNo": "20201130006756",
+      "stock": 1,
+      "sizeNo": "20160426000041",
+      "sizeCode": "6.5",
+      "sizeEur": "37.5"
+    }, {
+      "id": "ad79ff5dd9964e8f814314cfde0c2f63",
+      "skuNo": "20201130006757",
+      "stock": 1,
+      "sizeNo": "20160426000042",
+      "sizeCode": "7",
+      "sizeEur": "38"
+    }, {
+      "id": "f82ce4c65adf4a4382c5ab824c4ff588",
+      "skuNo": "20201130006758",
+      "stock": 1,
+      "sizeNo": "20160426000043",
+      "sizeCode": "7.5",
+      "sizeEur": "38.5"
+    }, {
+      "id": "58d72e44e076432b87be43547e6ef98b",
+      "skuNo": "20201130006759",
+      "stock": 1,
+      "sizeNo": "20160426000044",
+      "sizeCode": "8",
+      "sizeEur": "39"
+    }, {
+      "id": "3bd6aa2a009e44bc80e513e45406c8ef",
+      "skuNo": "20201130006760",
+      "stock": 1,
+      "sizeNo": "20160426000045",
+      "sizeCode": "8.5",
+      "sizeEur": "40"
+    }],
+    "proList": [],
+    "sizePicList": ["https://m-cdn-lv.topsports.com.cn/fe/mp/sizePic/NK/410101/N20160419000168.jpg", "https://m-cdn-lv.topsports.com.cn/fe/mp/sizePic/NK/410101/N20160419000170.jpg"]
+  }
+}
+
+商品加入购物车
+
+{
+  "productSkuNo" : "20201130006755",
+  "liveType" : 0,
+  "shopNo" : "NKCQ08",
+  "productCode" : "CT0979-602",
+  "shopCommodityId" : "c33d46bd98c049f0a95398655681c264",
+  "brandNo" : "NK",
+  "roomId" : "",
+  "num" : 1,
+  "roomName" : "",
+  "merchantNo" : "TS",
+  "productSizeCode" : "6",
+  "productSkuId" : "ed52386b960240ca8223aaa75562d0c5"
+}
+
+
+购物车商品
+
+{
+  "code": 1,
+  "bizCode": 20000,
+  "bizMsg": "成功",
+  "data": {
+    "totalAmount": 1199.00,
+    "totalNum": 2,
+    "discountAmount": 0.00,
+    "willBuyList": [{
+      "map": {},
+      "filterRules": null,
+      "orderByClause": null,
+      "shopId": "3d8dc4f8efd34be8abae0513c93e730f",
+      "shopNo": "NKCQ08",
+      "shopName": "滔搏重庆环球Jordan",
+      "totalNum": 1,
+      "logonName": null,
+      "orderSource": 23,
+      "virtualShopFlag": 0,
+      "buyCommodityVOList": [{
+        "map": {},
+        "filterRules": null,
+        "orderByClause": null,
+        "shoppingcartId": "85a9b4e19b174a049cfa06f7aa3725bc",
+        "memberId": "8a7a09a37578b7fe01758931dc6d5e60",
+        "paterId": null,
+        "shopNo": "NKCQ08",
+        "commodityId": "c33d46bd98c049f0a95398655681c264",
+        "productCode": "CT0979-602",
+        "productNo": "20200927001035",
+        "productName": "AIR JORDAN 1 MID CMFT\n部分鞋盒存在瑕疵褶皱，拍下即默认接受瑕疵。",
+        "productSizeName": null,
+        "productSizeCode": "6",
+        "productSizeEur": "36.5",
+        "sizeNo": "20160426000040",
+        "productSkuNo": "20201130006755",
+        "productColorName": "默认",
+        "productColorNo": "00",
+        "tagPrice": 1199.00,
+        "salePrice": 1199.00,
+        "picPath": "https://i1.ygimg.cn/pics/nike/2021/101434681/101434681_01_m.jpg?10",
+        "num": 1,
+        "checked": 1,
+        "status": 0,
+        "merchantNo": "TS",
+        "brandDetailNo": "NK01",
+        "isValid": 1,
+        "proNo": null,
+        "proName": null,
+        "assignProNo": null,
+        "effectiveProMap": null,
+        "havStock": true,
+        "itemFlag": 0,
+        "sortIndex": 1,
+        "liveType": 0,
+        "roomId": null,
+        "roomName": ""
+      }],
+      "proActivityList": [],
+      "checked": 1,
+      "sortIndex": 1,
+      "ticketDtos": null,
+      "orderTickets": null,
+      "ticketPresentDtos": null
+    }, {
+      "map": {},
+      "filterRules": null,
+      "orderByClause": null,
+      "shopId": "4918775f805b49028104689a9ce02f77",
+      "shopNo": "CVSH47",
+      "shopName": "滔搏上海浦东正大CV店",
+      "totalNum": 1,
+      "logonName": null,
+      "orderSource": 23,
+      "virtualShopFlag": 0,
+      "buyCommodityVOList": [{
+        "map": {},
+        "filterRules": null,
+        "orderByClause": null,
+        "shoppingcartId": "cb4fee302c3b47c5b558472a2672f71d",
+        "memberId": "8a7a09a37578b7fe01758931dc6d5e60",
+        "paterId": null,
+        "shopNo": "CVSH47",
+        "commodityId": "63d6c32f8b934955b044e0c5e9ccdc39",
+        "productCode": "171118C",
+        "productNo": "20201126000817",
+        "productName": "【消毒发货】 Converse   1970s情人节限定刺绣水晶底情侣高帮帆布鞋171118C",
+        "productSizeName": null,
+        "productSizeCode": "3.5",
+        "productSizeEur": null,
+        "sizeNo": "20160426000035",
+        "productSkuNo": "20201130001405",
+        "productColorName": "默认",
+        "productColorNo": "00",
+        "tagPrice": 639.00,
+        "salePrice": 639.00,
+        "picPath": "https://crm-resource-cdn.topsports.com.cn/group1/M00/0C/33/CvqKKWANGr2ASbMvAABX-IKI55c361.jpg",
+        "num": 1,
+        "checked": 0,
+        "status": 0,
+        "merchantNo": "TS",
+        "brandDetailNo": "CV01",
+        "isValid": 1,
+        "proNo": null,
+        "proName": null,
+        "assignProNo": null,
+        "effectiveProMap": null,
+        "havStock": true,
+        "itemFlag": 0,
+        "sortIndex": 2,
+        "liveType": 0,
+        "roomId": null,
+        "roomName": ""
+      }],
+      "proActivityList": [],
+      "checked": 0,
+      "sortIndex": 2,
+      "ticketDtos": null,
+      "orderTickets": null,
+      "ticketPresentDtos": null
+    }],
+    "failureList": [],
+    "failureNum": 0,
+    "singleSkuLimit": 20,
+    "totalSkuLimit": 99,
+    "errorMsg": null
+  }
+}
+
